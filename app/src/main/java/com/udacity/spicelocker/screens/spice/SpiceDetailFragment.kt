@@ -26,19 +26,25 @@ class SpiceDetailFragment : Fragment() {
         binding = DataBindingUtil.inflate(inflater,R.layout.spice_detail_fragment, container, false)
         binding.spiceSharedViewModel = viewModel
         binding.spice = Spice(
-            "Tumeric",
+            "Tum",
             "g",
-            250.0,
-            60.0,
-            "Generic",
-            "Ground Tumeric"
+            0.0,
+            0.0,
+            "",
+            ""
         )
 
+
         binding.cancelButton.setOnClickListener{
-            Log.i("SpiceDetailFragment", "Cancel Button Clicked")
+            Timber.i("Cancel Button Clicked")
             findNavController().navigateUp()
         }
 
-        return inflater.inflate(R.layout.spice_detail_fragment, container, false)
+        binding.saveSpiceButton.setOnClickListener{
+            Timber.i("Cancel Button Clicked")
+            findNavController().navigateUp()
+        }
+
+        return binding.root
     }
 }

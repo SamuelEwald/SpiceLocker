@@ -1,20 +1,16 @@
 package com.udacity.spicelocker.screens.spice
 
-import android.app.Activity
-import android.content.Intent
-import android.graphics.Bitmap
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.NavigationUI
 import com.udacity.spicelocker.R
 import com.udacity.spicelocker.databinding.SpiceCardLayoutBinding
-import com.udacity.spicelocker.databinding.SpiceDetailFragmentBinding
 import com.udacity.spicelocker.databinding.SpiceListFragmentBinding
 import timber.log.Timber
 
@@ -24,7 +20,7 @@ class SpiceListFragment : Fragment() {
         fun newInstance() = SpiceListFragment()
     }
 
-    private lateinit var viewModel: SpiceSharedViewModel
+    private val viewModel: SpiceSharedViewModel by activityViewModels()
     private lateinit var binding: SpiceListFragmentBinding
 
 
@@ -47,10 +43,6 @@ class SpiceListFragment : Fragment() {
             false
         )
 
-        viewModel = ViewModelProvider(this)[SpiceSharedViewModel::class.java]
-
-        binding.spiceListLayout.removeAllViews()
-
         binding.lifecycleOwner = this
         setHasOptionsMenu(true)
 
@@ -68,11 +60,6 @@ class SpiceListFragment : Fragment() {
             }
         })
         return binding.root
-    }
-
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(SpiceSharedViewModel::class.java)
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
