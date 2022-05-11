@@ -11,4 +11,12 @@
     <string name="instruction_step_one">Do Step One</string>
     <string name="formatted_spice_volume">%s%s</string>
     <string name="formatted_spice_used">%s%s</string>
+    <string name="logout_text">Logout</string>
+    <string name="name_label_text">Name:</string>
+    <string name="unit_label_text">Unit:</string>
+    <string name="volume_label_text">Volume:</string>
+    <string name="amount_used_label_text">Amount Used:</string>
+    <string name="brand_label_text">Brand:</string>
+    <string name="description_label_text">Description:</string>
+    <string name="save_button_text">Save</string>
 </resources>
