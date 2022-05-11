@@ -6,9 +6,11 @@
     <string name="register_button_text">Register</string>
     <string name="welcome_title">Welcome to Spice Locker!</string>
     <string name="welcome_message">Tired of going to the store and buying spices you already have? Keep track of everything right here in Spice Locker! </string>
-    <string name="ok_button_text">Ok</string>
+    <string name="ok_button_text">OK</string>
     <string name="instruction_title">Instructions</string>
-    <string name="instruction_step_one">Do Step One</string>
+    <string name="instruction_step_one">
+        1. Navigate to the Spice Locker screen with
+    </string>
     <string name="formatted_spice_volume">%s%s</string>
     <string name="formatted_spice_used">%s%s</string>
     <string name="logout_text">Logout</string>
