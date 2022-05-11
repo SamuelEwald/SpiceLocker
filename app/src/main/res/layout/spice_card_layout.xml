@@ -23,6 +23,8 @@
         app:cardElevation="2dp"
         tools:showIn="@layout/spice_list_fragment">
 
+<!--     Using a constraint layout here because the elements are both vertically and horizontally
+         organized, so I need to be able to account for both-->
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">

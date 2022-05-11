@@ -5,7 +5,8 @@
 
     >
 
-
+<!-- Using a constraint layout here so that I can position the action button in the bottom
+     right -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/spice_list_container"
         android:layout_width="match_parent"

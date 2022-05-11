@@ -1,7 +1,6 @@
 package com.udacity.spicelocker.screens.login
 
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
@@ -37,12 +36,6 @@ class LoginFragment : Fragment() {
 
 
         return binding.root
-    }
-
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(LoginViewModel::class.java)
-        // TODO: Use the ViewModel
     }
 
 

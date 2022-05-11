@@ -1,6 +1,5 @@
 package com.udacity.spicelocker.screens.instruction
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -32,12 +31,6 @@ class InstructionFragment : Fragment() {
 
 
         return binding.root
-    }
-
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(InstructionViewModel::class.java)
-        // TODO: Use the ViewModel
     }
 
 }

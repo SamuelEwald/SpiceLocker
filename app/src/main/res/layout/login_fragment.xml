@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     >
 
+    <!--  Using constraint layout because I want this entire form to react
+          dynamically to orientation and to be centered in the container-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/login_layout"
         android:layout_width="match_parent"

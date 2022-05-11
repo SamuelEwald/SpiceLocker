@@ -1,6 +1,5 @@
 package com.udacity.spicelocker.screens.welcome
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -34,12 +33,6 @@ class WelcomeFragment : Fragment() {
 
 
         return binding.root
-    }
-
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(WelcomeViewModel::class.java)
-        // TODO: Use the ViewModel
     }
 
 }

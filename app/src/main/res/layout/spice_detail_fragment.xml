@@ -12,7 +12,8 @@
         name="spiceSharedViewModel"
         type="com.udacity.spicelocker.screens.spice.SpiceSharedViewModel" />
 </data>
-
+<!--Using a constraint layout here to take advantage of chaining and having the inputs both
+    horizontally and vertically organized-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/spice_detail_layout"
         android:layout_width="match_parent"
