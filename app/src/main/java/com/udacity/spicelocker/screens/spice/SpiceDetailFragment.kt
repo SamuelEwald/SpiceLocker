@@ -2,7 +2,6 @@ package com.udacity.spicelocker.screens.spice
 
 
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -22,12 +21,12 @@ class SpiceDetailFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = DataBindingUtil.inflate(inflater,R.layout.spice_detail_fragment, container, false)
         binding.spiceSharedViewModel = viewModel
         binding.spice = Spice(
-            "Tum",
-            "g",
+            "",
+            "",
             0.0,
             0.0,
             "",

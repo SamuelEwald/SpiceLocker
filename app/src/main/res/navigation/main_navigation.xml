@@ -46,6 +46,10 @@
             android:id="@+id/action_spiceListFragment_to_spiceDetailFragment"
             app:destination="@id/spiceDetailFragment"
             app:popUpTo="@id/spiceListFragment" />
+        <action
+            android:id="@+id/action_spiceListFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/loginFragment" />
     </fragment>
     <fragment
         android:id="@+id/spiceDetailFragment"

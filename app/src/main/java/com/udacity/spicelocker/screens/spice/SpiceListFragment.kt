@@ -2,17 +2,13 @@ package com.udacity.spicelocker.screens.spice
 
 import android.os.Bundle
 import android.view.*
-import androidx.fragment.app.Fragment
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import androidx.lifecycle.Observer
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
-import androidx.navigation.ui.NavigationUI
 import com.udacity.spicelocker.R
 import com.udacity.spicelocker.databinding.SpiceCardLayoutBinding
 import com.udacity.spicelocker.databinding.SpiceListFragmentBinding
-import timber.log.Timber
 
 class SpiceListFragment : Fragment() {
 
@@ -26,14 +22,14 @@ class SpiceListFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+        setHasOptionsMenu(true)
     }
 
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
 
 
         binding = DataBindingUtil.inflate(
@@ -51,29 +47,26 @@ class SpiceListFragment : Fragment() {
         }
 
 
-        viewModel.spiceList.observe(viewLifecycleOwner, Observer { spices ->
+
+
+        viewModel.spiceList.observe(viewLifecycleOwner) { spices ->
             spices.forEach {
                 val spiceBinding: SpiceCardLayoutBinding =
                     DataBindingUtil.inflate(inflater, R.layout.spice_card_layout, container, false)
                 spiceBinding.spice = it
                 binding.spiceListLayout.addView(spiceBinding.root)
             }
-        })
+        }
         return binding.root
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        super.onCreateOptionsMenu(menu, inflater)
         inflater.inflate(R.menu.overflow_menu, menu)
     }
 
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        Timber.w(
-            "SpiceList - OnCreateOptionsMenu - Item %s",
-            NavigationUI.onNavDestinationSelected(item, requireView().findNavController())
-        )
-        return NavigationUI.onNavDestinationSelected(item, requireView().findNavController())
-                || super.onOptionsItemSelected(item)
+        findNavController().navigate(R.id.action_spiceListFragment_to_loginFragment)
+        return super.onOptionsItemSelected(item)
     }
 }
