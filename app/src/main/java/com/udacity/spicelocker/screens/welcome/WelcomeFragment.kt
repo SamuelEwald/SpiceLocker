@@ -27,7 +27,7 @@ class WelcomeFragment : Fragment() {
             inflater, R.layout.welcome_fragment, container, false)
 
         binding.welcomeOkButton.setOnClickListener{
-            Log.i("WelcomeFragment","onCreateView Called")
+            Log.i("WelcomeFragment","onCreateView Called now immediately")
             findNavController().navigate(WelcomeFragmentDirections.actionWelcomeFragmentToInstructionFragment())
         }
 
